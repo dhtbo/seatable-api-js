@@ -364,7 +364,7 @@ class Base {
 
   query(sql) {
     const url = `api/v1/dtables/${this.dtableUuid}/query/`;
-    const data = {sql: sql};
+    const data = {sql: sql, convert_keys: true};
     return this.req.post(url, {...data});
   }
   
